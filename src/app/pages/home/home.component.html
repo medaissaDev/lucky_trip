@@ -1,0 +1,48 @@
+<section class="lucky-image">
+  <div class="top-text">
+    <img
+      class="move-animation"
+      src="https://www.luckytrip.co.uk/assets/common/imgs/header-logo-min.png"
+      alt="luckytripIcon"
+    />
+  </div>
+  <div class="hearder-text">
+    <h5>Hi! i myself want to visit New York :)</h5>
+    <h1 class="h1 d-flex">Search LuckyTrip</h1>
+    <h4 class="op-8 zoom-in-out-box pb-1">
+      350 destinations, 1500 blog posts, Unlimited Trips
+    </h4>
+    <form>
+      <div class="icon-search">Search</div>
+      <input
+        (input)="keyWord$.next($any($event.target).value)"
+        type="search"
+        placeholder="Enter a destination..."
+      />
+      <button class="zoom" (click)="fetchDestinations()">Go</button>
+    </form>
+  </div>
+</section>
+<section class="t-section">
+  <div class="t-cards">
+    <h2 class="t-title">Trending</h2>
+    <div class="row">
+      <span *ngIf="isLoading" class="center-d-flex mt-2 m-2 mb-5">
+        <div class="loader"></div>
+      </span>
+      <span *ngIf="!isLoading && destinations && destinations.length">
+        <app-card
+          *ngFor="let destination of destinations"
+          [destination]="destination"
+        ></app-card>
+      </span>
+    </div>
+  </div>
+  <span *ngIf="!isLoading && (!destinations || destinations.length === 0)">
+    <div class="center-d-flex t-title">
+      <h2 class="mb-5">
+        Ops no result was found... try with an other destination!
+      </h2>
+    </div>
+  </span>
+</section>

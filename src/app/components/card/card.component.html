@@ -1,0 +1,24 @@
+<div class="destiantions-card" *ngIf="destination">
+  <div
+    class="column"
+    [routerLink]="
+      destination.id ? ['/destination-details', destination.id] : []
+    "
+    routerLinkActive="active"
+    ariaCurrentWhenActive="page"
+  >
+    <div class="card zoom">
+      <div class="container">
+        <img
+          [src]="destination.image_url"
+          alt="Snow"
+          style="width: 100%; height: 200px"
+        />
+        <div class="top-right">
+          <div class="f-s-15">{{ destination.city }}</div>
+          <div class="padding-top f-s-15">{{ destination.country_name }}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,161 @@
+* {
+  box-sizing: border-box;
+}
+
+.lucky-image {
+  height: 500px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.top-text {
+  z-index: 1005;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.top-text img {
+  padding-left: 1%;
+}
+
+.hearder-text {
+  text-align: center;
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+form {
+  color: rgb(250, 239, 239);
+  display: flex;
+  padding: 3px;
+  border: 1px solid currentColor;
+  border-radius: 20px;
+  width: 330px;
+  min-width: 290px;
+  margin: 0 auto;
+  height: 40px;
+  margin-top: 5px;
+}
+
+button[type="submit"] {
+  overflow: hidden;
+  width: 30%;
+  min-width: 30px;
+  padding: 0;
+  margin: 2px;
+  border: 1px solid #ff4476;
+  border-radius: inherit;
+  cursor: pointer;
+  font-weight: bold;
+  background-color: #ff4476;
+  color: #fff;
+}
+
+button[type="submit"]:hover {
+  opacity: 1;
+}
+
+button[type="submit"]:focus,
+input[type="search"]:focus {
+  box-shadow: none;
+  border-color: none;
+  outline: none;
+}
+
+.trending-section {
+  background-color: #090f28;
+  margin-top: -20px;
+}
+
+.trending-cards {
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
+.trending-title {
+  color: #46d0fb;
+  padding: 2px;
+  padding-top: 30px;
+}
+
+.desc-text {
+  color: #fff;
+  line-height: 1.7;
+  margin-right: 10px;
+}
+
+#breathing-button {
+  -webkit-animation: breathing 3s ease-out infinite;
+  animation: breathing 3s ease-out infinite;
+  font-family: "Lantinghei SC";
+  background-image: url("https://www.luckytrip.co.uk/assets/common/imgs/LuckyButton-min.png");
+  -webkit-font-smoothing: antialiased;
+  background-size: 110px 110px;
+  background-repeat: no-repeat;
+  width: 110px;
+  height: 110px;
+  cursor: pointer;
+  text-align: center;
+  margin: 0 auto;
+}
+
+@-webkit-keyframes breathing {
+  0% {
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+
+  25% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+
+  60% {
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+
+  100% {
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+}
+
+@keyframes breathing {
+  0% {
+    -webkit-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+
+  25% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+
+  60% {
+    -webkit-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+
+  100% {
+    -webkit-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+}
+
+.ml-16 {
+  margin-left: 16px;
+}

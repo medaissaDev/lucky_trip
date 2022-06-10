@@ -1,1 +1,240 @@
-/* You can add global styles to this file, and also import other style files */
+body,
+html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.h1 {
+  font-size: 3rem;
+}
+
+/* Remove extra left and right margins, due to padding */
+.row {
+  margin: 0 -5px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.zoom {
+  transition: transform 0.4s; /* Animation */
+}
+
+.zoom:hover {
+  transform: scale(
+    1.1
+  ); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+
+.move-animation {
+  position: relative;
+  animation: move 5s infinite;
+}
+
+@keyframes move {
+  from {
+    left: 0px;
+  }
+  to {
+    left: 150px;
+  }
+}
+
+.zoom-in-out-box {
+  animation: zoom-in-zoom-out 4s ease infinite;
+}
+
+@keyframes zoom-in-zoom-out {
+  0% {
+    transform: scale(1, 1);
+  }
+  50% {
+    transform: scale(1.5, 1.5);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
+.loader {
+  border: 14px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 14px solid #3498db;
+  width: 100px;
+  height: 100px;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.center-h {
+  margin: 0 auto;
+}
+
+.center-d-flex {
+  display: flex;
+  justify-content: center;
+}
+
+.m-1 {
+  margin: 0.5rem;
+}
+
+.m-2 {
+  margin: 1rem;
+}
+
+.mt-2 {
+  margin-top: 1.5rem;
+}
+
+.mt-3 {
+  margin-top: 2.5rem;
+}
+
+.mt-4 {
+  margin-top: 3.5rem;
+}
+
+.mb-1 {
+  margin-bottom: 1rem;
+}
+
+.mb-4 {
+  margin-bottom: 4rem;
+}
+
+.mb-5 {
+  margin-bottom: 5rem;
+}
+
+.pb-5 {
+  padding-bottom: 5rem;
+}
+
+.pb-1 {
+  padding-bottom: 1rem;
+}
+
+.pt-2 {
+  padding-top: 2rem;
+}
+
+.pl-3 {
+  padding-left: 2.5rem;
+}
+
+input[type="search"] {
+  border: none;
+  background: transparent;
+  margin: 0;
+  padding: 9px 5px;
+  font-size: 15px;
+  font-weight: bold;
+  color: inherit;
+  border: 1px solid transparent;
+  border-radius: inherit;
+}
+
+input[type="search"]::placeholder {
+  color: #fff;
+}
+
+.icon-search {
+  text-indent: -999px;
+  overflow: hidden;
+  width: 30%;
+  min-width: 30px;
+  padding: 0;
+  margin: 0;
+  border: 1px solid transparent;
+  border-radius: inherit;
+  background: transparent
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='white' width='16' height='16' class='bi bi-search' viewBox='0 0 16 16'%3E%3Cpath d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z'%3E%3C/path%3E%3C/svg%3E")
+    no-repeat center;
+}
+
+.t-title {
+  color: #46d0fb;
+  padding: 2px;
+  padding-top: 30px;
+}
+
+.t-section {
+  background-color: #090f28;
+  margin-top: -20px;
+}
+
+.t-section-bg {
+  background-color: #090f28;
+}
+
+.t-cards {
+  margin-left: 4rem;
+  margin-right: 3rem;
+}
+
+.f-s-15 {
+  font-size: 15px;
+}
+
+.detail-p {
+  margin-left: 4rem;
+  margin-right: 3rem;
+}
+
+.y-title {
+  color: hsl(48, 93%, 57%);
+  padding: 2px;
+  padding-top: 30px;
+}
+
+.r-title {
+  color: #ff4476;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.p-text {
+  color: #fff;
+  line-height: 1.7;
+}
+
+.op-8 {
+  opacity: 0.8;
+}
+
+@media (max-width: 667px) {
+  .move-animation {
+    animation: unset;
+  }
+}
